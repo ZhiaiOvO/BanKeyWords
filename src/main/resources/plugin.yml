@@ -1,0 +1,38 @@
+name: BanKeyWords
+version: '1.0-SNAPSHOT'
+main: top.zamc.banKeyWords.BanKeyWords
+api-version: '1.21'
+authors: [ Zhiai ]
+description: Ban some key words that the Owner wont the players to say
+commands:
+  addkeywords:
+    permission: bankeywords.addkeywords
+    description: add a(or some) new key word(s) to the config
+    usage: /addkeywords <key word>...<>
+    aliases:
+      - add
+      - akw
+  bkwreload:
+    permission: bankeywords.reload
+    description: reload the BanKeyWords plugin
+    usage: /BanKeyWords reload
+    aliases:
+      - bkwr
+      - bkwrel
+  keywordlist:
+    permission: bankeywords.keywordlist
+    description: show the list of key words
+    usage: /BanKeyWords keywordlist
+    aliases:
+      - kwl
+
+permissions:
+  bankeywords.reload:
+    description: allow to reload the plugin configuration
+    default: op
+  bankeywords.addkeywords:
+    description: allow to add a or some key word(s)
+    default: op
+  bankeywords.keywordlist:
+    description: allow to see the list of key words
+    default: op
