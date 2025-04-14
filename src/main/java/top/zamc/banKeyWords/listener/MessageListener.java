@@ -15,14 +15,11 @@ import java.util.regex.Pattern;
 public class MessageListener implements Listener, CheckKeyWords {
     public BanKeyWords plugin;
     private String formatedMessage;
-    public MessageListener(){
-    }
     public MessageListener(@NotNull BanKeyWords plugin) {
         this.plugin = plugin;
     }
     @EventHandler
     public void onPlayerSendMessage(AsyncPlayerChatEvent event){
-        ArrayList<String> keyWordList = plugin.getKeyWords();
         String playerMessage = event.getMessage();
         if (checkMessage(playerMessage)){
             event.setMessage(formatedMessage);

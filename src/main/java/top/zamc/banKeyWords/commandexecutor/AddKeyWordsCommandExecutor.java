@@ -1,34 +1,21 @@
 package top.zamc.banKeyWords.commandexecutor;
 
-import com.google.common.base.Charsets;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.jetbrains.annotations.NotNull;
 import top.zamc.banKeyWords.BanKeyWords;
 import top.zamc.banKeyWords.api.CheckKeyWords;
-import top.zamc.banKeyWords.listener.MessageListener;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static com.google.common.io.Resources.getResource;
 
 public class AddKeyWordsCommandExecutor implements CommandExecutor, CheckKeyWords {
 
     public BanKeyWords plugin;
-    public AddKeyWordsCommandExecutor() {
-    }
     public AddKeyWordsCommandExecutor(BanKeyWords plugin) {
         this.plugin = plugin;
     }
