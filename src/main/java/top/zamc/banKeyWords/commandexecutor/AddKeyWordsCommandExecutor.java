@@ -31,6 +31,7 @@ public class AddKeyWordsCommandExecutor implements CommandExecutor, CheckKeyWord
                     sender.sendMessage(ChatColor.RED + "无法重复添加!");
                 }else {
                     argList.add(args[i]);
+                    sender.sendMessage(ChatColor.YELLOW + "已添加关键字：" + ChatColor.GREEN + args[i]);
                 }
             }
             ArrayList<String> newList = new ArrayList<>();
